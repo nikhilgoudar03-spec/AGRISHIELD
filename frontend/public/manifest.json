@@ -1,0 +1,26 @@
+{
+  "name": "AgriShield - Smart Farmer Safety & Monitoring",
+  "short_name": "AgriShield",
+  "description": "Real-Time IoT-Based Smart Farmer Safety and Fall Protection Platform",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07130F",
+  "theme_color": "#047857",
+  "categories": ["agriculture", "utilities", "safety"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

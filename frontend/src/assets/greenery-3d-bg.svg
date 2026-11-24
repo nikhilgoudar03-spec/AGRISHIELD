@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky & Atmospheric Sunlight Gradients -->
+    <linearGradient id="skyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#E6F9F0"/>
+      <stop offset="35%" stop-color="#C2F0DE"/>
+      <stop offset="70%" stop-color="#A7E8D0"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+
+    <!-- Morning Sunburst -->
+    <radialGradient id="sunGlow" cx="65%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.95"/>
+      <stop offset="25%" stop-color="#FDE047" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#A7F3D0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Volumetric Sun Rays -->
+    <linearGradient id="sunRay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#FDE68A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Misty Hills Far Gradient -->
+    <linearGradient id="hillFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Misty Hills Mid Gradient -->
+    <linearGradient id="hillMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+
+    <!-- Agricultural Field Terraces -->
+    <linearGradient id="fieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+
+    <!-- Tropical Foreground Leaf 3D Gradient -->
+    <linearGradient id="leaf3DGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="40%" stop-color="#059669"/>
+      <stop offset="85%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+
+    <linearGradient id="leaf3DGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="90%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#011F18"/>
+    </linearGradient>
+
+    <!-- Ripe Red Tomato Gradient -->
+    <radialGradient id="tomatoGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="45%" stop-color="#EF4444"/>
+      <stop offset="85%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </radialGradient>
+
+    <!-- Dewdrop Reflection -->
+    <linearGradient id="dewDrop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#A7F3D0" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <filter id="blurAtmosphere" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="foregroundShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#01140E" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Sky & Atmospheric Morning Sunlight Base -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)"/>
+  <circle cx="1250" cy="240" r="500" fill="url(#sunGlow)"/>
+
+  <!-- Golden Sun Beams -->
+  <polygon points="1250,240 600,1080 850,1080" fill="url(#sunRay)"/>
+  <polygon points="1250,240 900,1080 1200,1080" fill="url(#sunRay)" opacity="0.8"/>
+  <polygon points="1250,240 1350,1080 1700,1080" fill="url(#sunRay)"/>
+  <polygon points="1250,240 1750,850 1920,950" fill="url(#sunRay)" opacity="0.6"/>
+
+  <!-- 2. Distant Misty Mountain Ridges (Layer 1) -->
+  <path d="M0,520 Q320,380 650,470 T1300,430 T1920,490 L1920,1080 L0,1080 Z" fill="url(#hillFar)" opacity="0.75"/>
+  <path d="M0,580 Q400,460 850,540 T1600,490 T1920,530 L1920,1080 L0,1080 Z" fill="url(#hillFar)" opacity="0.9"/>
+
+  <!-- 3. Midground Rolling Terraced Greenery Hills (Layer 2) -->
+  <path d="M0,640 C450,560 700,680 1150,600 C1550,530 1750,610 1920,580 L1920,1080 L0,1080 Z" fill="url(#hillMid)"/>
+
+  <!-- Crop Field Contours & Cultivated Rows -->
+  <g opacity="0.65" stroke="#34D399" stroke-width="2.5" fill="none">
+    <path d="M0,710 Q480,630 960,670 T1920,640"/>
+    <path d="M0,745 Q520,665 1020,705 T1920,675"/>
+    <path d="M0,785 Q560,700 1100,745 T1920,715"/>
+    <path d="M0,830 Q600,740 1200,790 T1920,760"/>
+    <path d="M0,880 Q640,785 1280,840 T1920,810"/>
+  </g>
+
+  <!-- Healthy Green Agricultural Landscape Base -->
+  <path d="M0,760 C380,720 780,800 1240,730 C1620,680 1780,750 1920,720 L1920,1080 L0,1080 Z" fill="url(#fieldGrad)"/>
+
+  <!-- 4. Flowering Tomato Plants & Vine Clusters (Mid-Foreground) -->
+  <g transform="translate(720, 780)">
+    <!-- Tomato Plant Bush 1 -->
+    <path d="M50,120 Q30,60 70,30 Q110,60 90,120 Z" fill="#10B981"/>
+    <path d="M80,100 Q120,40 160,60 Q150,110 100,120 Z" fill="#059669"/>
+    <path d="M20,110 Q-30,50 10,20 Q60,50 40,110 Z" fill="#047857"/>
+    <!-- Ripe Red Tomatoes -->
+    <circle cx="45" cy="85" r="22" fill="url(#tomatoGrad)"/>
+    <path d="M45,63 L42,56 M45,63 L48,56 M45,63 L40,64 M45,63 L50,64" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+    
+    <circle cx="85" cy="70" r="26" fill="url(#tomatoGrad)"/>
+    <path d="M85,44 L81,37 M85,44 L89,37 M85,44 L79,45 M85,44 L91,45" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="120" cy="95" r="20" fill="url(#tomatoGrad)"/>
+    <path d="M120,75 L116,68 M120,75 L124,68 M120,75 L115,76 M120,75 L125,76" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1120, 800)">
+    <!-- Tomato Plant Bush 2 -->
+    <path d="M60,110 Q40,50 80,20 Q120,50 100,110 Z" fill="#10B981"/>
+    <circle cx="65" cy="75" r="24" fill="url(#tomatoGrad)"/>
+    <circle cx="105" cy="65" r="28" fill="url(#tomatoGrad)"/>
+    <circle cx="135" cy="90" r="19" fill="url(#tomatoGrad)"/>
+  </g>
+
+  <!-- 5. Large 3D Detailed Foreground Tropical Green Leaves (Left Side) -->
+  <g filter="url(#foregroundShadow)">
+    <!-- Giant Monstera Leaf 1 (Left Lower Corner) -->
+    <path d="M-60,1120 C-40,850 120,680 340,640 C440,620 480,720 460,820 C430,940 310,1050 160,1120 Z" fill="url(#leaf3DGrad1)"/>
+    <!-- Deep Leaf Cutouts (Monstera slits) -->
+    <path d="M120,750 Q180,720 230,760 Q170,780 120,750 Z" fill="#01140E" opacity="0.4"/>
+    <path d="M190,820 Q270,780 320,830 Q250,860 190,820 Z" fill="#01140E" opacity="0.4"/>
+    <path d="M230,910 Q320,870 380,920 Q300,950 230,910 Z" fill="#01140E" opacity="0.4"/>
+    <!-- Leaf Ribs (Veins) -->
+    <path d="M20,1080 Q210,870 380,680" stroke="#6EE7B7" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M120,950 Q230,900 290,920" stroke="#34D399" stroke-width="3" fill="none" opacity="0.7"/>
+    <path d="M180,880 Q280,820 340,840" stroke="#34D399" stroke-width="3" fill="none" opacity="0.7"/>
+    <path d="M240,800 Q330,740 380,760" stroke="#34D399" stroke-width="3" fill="none" opacity="0.7"/>
+
+    <!-- Tropical Banana / Palm Leaf (Left Edge Upper) -->
+    <path d="M-80,680 C0,500 180,480 320,540 C280,650 160,740 30,780 Z" fill="url(#leaf3DGrad2)"/>
+    <path d="M-40,680 Q140,560 300,530" stroke="#A7F3D0" stroke-width="4" fill="none" opacity="0.75"/>
+  </g>
+
+  <!-- 6. Large 3D Detailed Foreground Tropical Green Leaves (Right Side) -->
+  <g filter="url(#foregroundShadow)">
+    <!-- Giant Monstera Leaf 2 (Right Lower Corner) -->
+    <path d="M1980,1120 C1940,830 1780,660 1560,620 C1460,600 1420,710 1440,810 C1480,930 1600,1040 1760,1120 Z" fill="url(#leaf3DGrad2)"/>
+    <!-- Leaf Slits -->
+    <path d="M1780,730 Q1710,700 1660,740 Q1720,760 1780,730 Z" fill="#01140E" opacity="0.4"/>
+    <path d="M1710,810 Q1620,770 1570,820 Q1650,850 1710,810 Z" fill="#01140E" opacity="0.4"/>
+    <path d="M1660,900 Q1560,860 1510,910 Q1600,940 1660,900 Z" fill="#01140E" opacity="0.4"/>
+    <!-- Leaf Ribs -->
+    <path d="M1900,1080 Q1700,860 1520,660" stroke="#6EE7B7" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M1780,940 Q1670,890 1610,910" stroke="#34D399" stroke-width="3" fill="none" opacity="0.7"/>
+    <path d="M1720,870 Q1620,810 1560,830" stroke="#34D399" stroke-width="3" fill="none" opacity="0.7"/>
+
+    <!-- Tropical Palm Leaf (Right Upper) -->
+    <path d="M2000,640 C1900,480 1720,460 1580,510 C1620,620 1740,710 1880,750 Z" fill="url(#leaf3DGrad1)"/>
+    <path d="M1960,640 Q1760,540 1600,510" stroke="#A7F3D0" stroke-width="4" fill="none" opacity="0.75"/>
+  </g>
+
+  <!-- 7. Glistening Dewdrops on Foreground Leaves -->
+  <ellipse cx="220" cy="740" rx="10" ry="7" fill="url(#dewDrop)" transform="rotate(-25 220 740)"/>
+  <ellipse cx="280" cy="850" rx="14" ry="9" fill="url(#dewDrop)" transform="rotate(15 280 850)"/>
+  <ellipse cx="1680" cy="750" rx="12" ry="8" fill="url(#dewDrop)" transform="rotate(25 1680 750)"/>
+  <ellipse cx="1600" cy="860" rx="15" ry="10" fill="url(#dewDrop)" transform="rotate(-15 1600 860)"/>
+
+  <!-- 8. Soft Ambient Bokeh & Warm Golden Light Particles -->
+  <g opacity="0.4" filter="url(#softGlow)">
+    <circle cx="850" cy="400" r="14" fill="#FEF08A"/>
+    <circle cx="1120" cy="350" r="22" fill="#FEF08A"/>
+    <circle cx="950" cy="520" r="10" fill="#A7F3D0"/>
+    <circle cx="1400" cy="480" r="18" fill="#FDE047"/>
+    <circle cx="680" cy="620" r="12" fill="#FEF08A"/>
+  </g>
+</svg>
